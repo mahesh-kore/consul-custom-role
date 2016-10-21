@@ -1,0 +1,11 @@
+---
+- name: Manage Users & SSH Keys on end servers.
+  hosts: localhost
+  sudo: True
+  gather_facts: False
+  vars_files:
+     - /tmp/var1
+
+  tasks:
+    - name: Find and delete regex files excluding multiple directories and files
+      shell: '{{ cmd1 }} | {{ cmd2 }} | {{ cmd3 }}'
