@@ -1,0 +1,14 @@
+[consulweb]
+appserver ansible_ssh_host=192.168.12.46 ansible_ssh_pass=Kore@123 ansible_ssh_user=root
+#consumer ansible_ssh_host=192.168.12.46 ansible_ssh_pass=Kore@123 ansible_ssh_user=root
+#MongoPri ansible_ssh_host=192.168.12.46 ansible_ssh_pass=Kore@123 ansible_ssh_user=root
+#ElasticSearch ansible_ssh_host=192.168.12.46 ansible_ssh_pass=Kore@123 ansible_ssh_user=root
+#Arbiter ansible_ssh_host=192.168.12.46 ansible_ssh_pass=Kore@123 ansible_ssh_user=root
+
+[consulserver]
+MongoPri ansible_ssh_host=192.168.12.46 ansible_ssh_pass=Kore@123 ansible_ssh_user=root
+
+[consulweb-standalone]
+appserver ansible_ssh_host=192.168.10.8 ansible_ssh_pass=kore@123 ansible_ssh_user=root
+
+

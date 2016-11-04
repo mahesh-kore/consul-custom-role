@@ -4,12 +4,17 @@
   hosts: monit-onprem
   gather_facts: True
   user: root
+  vars:
+    _baseDir: "{{ BASE_DIR }}"
+    _varsPath: "{{ _baseDir }}/vars"
+    _rolesPath: "{{ _baseDir }}/roles"
 
   vars_files:
+   - "{{ _varsPath }}/global.yml"
    - "{{ _varsPath }}/monitvars"
 
   roles:
-    - role: pgolm.monit
+    - role: "{{ _rolesPath }}/pgolm.monit"
 
   tasks:
     - include: "{{ tasks }}/monit.yml"
